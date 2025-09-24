@@ -1,3 +1,10 @@
+# BuildFingerprint spoof to fix RCS/Wallet
+TARGET_ENABLE_FP_OVERRIDE ?= true
+ifeq ($(TARGET_ENABLE_FP_OVERRIDE),true)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildFingerprint=google/mustang_beta/mustang:CANARY/ZP11.260618.005/15760424:user/release-keys
+endif
+
 # Evolution X packages
 PRODUCT_PACKAGES += \
     BatteryStatsViewer \
